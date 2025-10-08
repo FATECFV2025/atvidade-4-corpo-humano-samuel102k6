@@ -5,14 +5,12 @@ public class CorpoHumano {
     private double volume;
     private double densidade;
 
-    // Construtor
     public CorpoHumano(double massa, double volume) {
         this.massa = massa;
         this.volume = volume;
         this.calcularDensidade();
     }
 
-    // Método privado para calcular densidade
     private void calcularDensidade() {
         if (volume > 0) {
             this.densidade = this.massa / this.volume;
@@ -21,7 +19,6 @@ public class CorpoHumano {
         }
     }
 
-    // Getters
     public double getMassa() {
         return massa;
     }
@@ -34,7 +31,6 @@ public class CorpoHumano {
         return densidade;
     }
 
-    // Setters
     public void setMassa(double massa) {
         if (massa >= 0) {
             this.massa = massa;
@@ -45,7 +41,7 @@ public class CorpoHumano {
     public void setVolume(double volume) {
         if (volume > 0) {
             this.volume = volume;
-            this.calcularDensidade(); // Atualiza densidade
+            this.calcularDensidade();
         } else {
             System.out.println("Erro: o volume deve ser maior que zero.");
         }
