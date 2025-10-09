@@ -1,24 +1,29 @@
-package main.java;
-
 public class CorpoHumano {
     private double massa;
     private double volume;
     private double densidade;
+    private double altura;
 
-    public CorpoHumano(double massa, double volume) {
+    // Construtor
+    public CorpoHumano(double massa, double volume, double densidade, double altura) {
         this.massa = massa;
         this.volume = volume;
-        this.calcularDensidade();
+        this.densidade = densidade;
+        this.altura = altura;
     }
 
-    private void calcularDensidade() {
-        if (volume > 0) {
-            this.densidade = this.massa / this.volume;
-        } else {
-            this.densidade = 0.0;
-        }
+    // Método para calcular o IMC
+    public double calcularIMC() {
+        return massa / (altura * altura);
     }
 
+    // Método para atualizar massa e altura
+    public void atualizarMedidas(double novaMassa, double novaAltura) {
+        this.massa = novaMassa;
+        this.altura = novaAltura;
+    }
+
+    // Getters para acesso aos atributos
     public double getMassa() {
         return massa;
     }
@@ -31,18 +36,7 @@ public class CorpoHumano {
         return densidade;
     }
 
-    public void setMassa(double massa) {
-        if (massa >= 0) {
-            this.massa = massa;
-            this.calcularDensidade(); // Atualiza densidade
-        }
+    public double getAltura() {
+        return altura;
     }
-
-    public void setVolume(double volume) {
-        if (volume > 0) {
-            this.volume = volume;
-            this.calcularDensidade();
-        } else {
-            System.out.println("Erro: o volume deve ser maior que zero.");
-        }
-    }
+}
