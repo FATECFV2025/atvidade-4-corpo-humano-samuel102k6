@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import.CorpoHumano;
+import CorpoHumano;
 
 public class CorpoHumanoTest {
     private CorpoHumano corpo;
