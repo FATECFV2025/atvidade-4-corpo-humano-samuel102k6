@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    public static void app(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("=== CRIAÇÃO DO OBJETO CORPO HUMANO ===");
