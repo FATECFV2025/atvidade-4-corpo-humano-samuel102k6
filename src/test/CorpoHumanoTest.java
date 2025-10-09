@@ -1,5 +1,5 @@
 package test;
-// CorpoHumanoTest.java
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
@@ -12,7 +12,6 @@ public class CorpoHumanoTest {
 
     @Before
     public void setUp() {
-        corpo = new CorpoHumano(70, 0.07, 1000, 1.75);
     }
 
     @Test
@@ -49,3 +48,4 @@ public class CorpoHumanoTest {
         assertEquals(expectedIMC, corpo.calcularIMC(), 0.01);
     }
 }
+
