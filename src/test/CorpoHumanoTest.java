@@ -1,11 +1,11 @@
 package test;
-// CorpoHumanoTest.java
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import CorpoHumano;
+import modelo.CorpoHumano;
 
 public class CorpoHumanoTest {
     private CorpoHumano corpo;
@@ -49,3 +49,4 @@ public class CorpoHumanoTest {
         assertEquals(expectedIMC, corpo.calcularIMC(), 0.01);
     }
 }
+
