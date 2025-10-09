@@ -41,4 +41,17 @@ public class CorpoHumano {
     public double getAltura() {
         return altura;
     }
+
+    public void setMassa(double massa) {
+        this.massa = massa; 
+    }
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+    public void setDensidade(double densidade) {
+        this.densidade = densidade;
+    }
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
 }
