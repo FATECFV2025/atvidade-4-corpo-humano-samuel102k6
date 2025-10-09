@@ -5,14 +5,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import modelo.CorpoHumano;
+import main.java.CorpoHumano;
 
 public class CorpoHumanoTest {
     private CorpoHumano corpo;
 
     @Before
     public void setUp() {
-        corpo = new CorpoHumano(70, 0.07, 1000, 1.75);
     }
 
     @Test
