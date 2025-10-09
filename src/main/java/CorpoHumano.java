@@ -1,4 +1,4 @@
-package modelo;
+package main.java;
 
 public class CorpoHumano {
     private double massa;
