@@ -1,0 +1,4 @@
+RESPOSTAS
+
+1)ao adicionar o elemento c1.massa="2", houve um erro de compilação pois as aspas o definem como String sendo que a variável é um número float ou douvle
+2)ao trocar de private para public, o elemento da massa se tornou acessível a outras classes
