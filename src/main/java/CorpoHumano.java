@@ -1,3 +1,5 @@
+package modelo;
+
 public class CorpoHumano {
     private double massa;
     private double volume;
