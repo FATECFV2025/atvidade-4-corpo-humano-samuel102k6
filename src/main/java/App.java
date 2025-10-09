@@ -1,30 +1,49 @@
-package main.java;
 import java.util.Scanner;
 
-public class App {
-        //Comentário
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in); 
+        System.out.println("=== CRIAÇÃO DO OBJETO CORPO HUMANO ===");
+        System.out.print("Digite a massa inicial (kg): ");
+        double massa = scanner.nextDouble();
 
-        //variável local a
-        String v2;
-        int v1;
+        System.out.print("Digite o volume inicial (m³): ");
+        double volume = scanner.nextDouble();
 
-        System.out.println("Comando de Saida de Dados");
-        
-        System.out.printf("Informe uma palavra: ");
-        v2 = ler.next();
+        System.out.print("Digite a densidade inicial (kg/m³): ");
+        double densidade = scanner.nextDouble();
 
-        System.out.printf("Informe um número: ");
-        v1 = ler.nextInt();
+        System.out.print("Digite a altura inicial (m): ");
+        double altura = scanner.nextDouble();
 
-        System.out.printf(v2+" "+v1);
-    }
-    public static void main(String[] args) throws Exception {
-        funcao_teste();
+        // Criar objeto CorpoHumano
+        CorpoHumano corpo = new CorpoHumano(massa, volume, densidade, altura);
 
+        System.out.println("\n=== VALORES INICIAIS ===");
+        System.out.println("Massa: " + corpo.getMassa() + " kg");
+        System.out.println("Volume: " + corpo.getVolume() + " m³");
+        System.out.println("Densidade: " + corpo.getDensidade() + " kg/m³");
+        System.out.println("Altura: " + corpo.getAltura() + " m");
+        System.out.println("IMC: " + corpo.calcularIMC());
 
+        // Solicitar novos valores
+        System.out.print("Digite uma nova massa (kg): ");
+        double novaMassa = scanner.nextDouble();
+
+        System.out.print("Digite uma nova altura (m): ");
+        double novaAltura = scanner.nextDouble();
+
+        // Atualizar medidas
+        corpo.atualizarMedidas(novaMassa, novaAltura);
+
+        // Exibir novos valores
+        System.out.println("\nNovos valores:");
+        System.out.println("Massa: " + corpo.getMassa() + " kg");
+        System.out.println("Altura: " + corpo.getAltura() + " m");
+        System.out.println("Novo IMC: " + corpo.calcularIMC());
+
+        scanner.close();
     }
 }
+
